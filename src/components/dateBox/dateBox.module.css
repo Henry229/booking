@@ -1,0 +1,45 @@
+.container {
+  width: 100%;
+  display: flex;
+}
+
+.container:nth-child(odd) {
+  background: #ed0b0b;
+}
+
+.dateBox {
+  flex: 1 1 20%;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .dateBox:nth-child(even) {
+  background: yellow;
+} */
+
+.contents {
+  flex: 1 1 80%;
+}
+
+
+.day {
+  padding: 0.5em;
+  padding-bottom: 0.2em;
+  color: #d1d1d1;
+}
+
+.date {
+  color: white;
+  font-size: 1.8rem;
+}
+
+/* .modal {
+  width: 40em;
+  height: 60em;
+  background: #c34a36;
+  padding: 0; 
+   margin: 0;
+} */

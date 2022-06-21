@@ -1,0 +1,32 @@
+.bookContents {
+  width: 40em;
+  height: 60em;
+  background: #b71414;
+  padding: 1.5em; 
+  color: white;
+  text-align: center;
+}
+
+.dateBox {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 1.5em;
+}
+
+.date {
+  margin-right: 0.5em;
+}
+
+.scheduleBox {
+  width: 80%;
+  background: #ef3737;
+  margin-top: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.5em;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+}
