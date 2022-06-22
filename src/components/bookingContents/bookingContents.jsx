@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './bookingContents.module.css';
-import {DaySwitch, MonthSwitch} from './switch';
+import {DaySwitch, MonthSwitch} from '../../calendar/switch';
 
-const BookingContents = ({value}) => {
+const BookingContents = ({value,onOpenSecond}) => {
   const daySwitch = DaySwitch(value);
   const monthSwitch = MonthSwitch(value);
 
@@ -28,6 +28,9 @@ const BookingContents = ({value}) => {
           <p>Emode</p>
           <p>2:00 PM - 4:00 PM</p>
         </div>
+        <button className={styles.scheduleButton} onClick={onOpenSecond}>
+          <img className={styles.addSchedule} src="/images/calendar-plus-solid.png" alt="booking" />
+        </button>
       </section>
     </div>
   )

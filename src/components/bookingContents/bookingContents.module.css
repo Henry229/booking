@@ -5,6 +5,7 @@
   padding: 1.5em; 
   color: white;
   text-align: center;
+  position: relative;
 }
 
 .dateBox {
@@ -29,4 +30,22 @@
   border-radius: 5px;
   padding: 0.5em;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.scheduleButton {
+  width: 5em;
+  height: 5em;
+  background: #FF8066;
+  outline: none;
+  border-radius: 50%;
+  border: 1px solid #FF8066;
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+}
+
+.addSchedule {
+  color: white;
+  height: 90%;
+  padding: 0.5em;
 }
