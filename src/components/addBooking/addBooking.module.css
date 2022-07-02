@@ -1,0 +1,9 @@
+.container {
+  width: 40em;
+  height: 60em;
+  background: #b71414;
+  padding: 1.5em; 
+  color: white;
+  text-align: center;
+  position: relative;
+}

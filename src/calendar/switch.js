@@ -1,7 +1,7 @@
 
 export const DaySwitch = (value) => {
   let fullDay = "";
-  console.log("value: ", value);
+  // console.log("value: ", value);
   switch ( value.day ) {
     case 'SUN':
       fullDay = "SUNDAY";

@@ -2,13 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './app';
-// import reportWebVitals from './reportWebVitals';
+import firebaseApp from './services/firebase';
+import ClientRepository from './services/clientRepository';
+
+const clientRepository = new ClientRepository();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App clientRepository={clientRepository}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// reportWebVitals();
