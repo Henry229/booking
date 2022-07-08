@@ -45,7 +45,7 @@ const AddClient = () => {
       const updated = {...states};
       // console.log("!!!Client in function :", states,'/', client);
       updated.clients[client.id] = client;
-      updated.oneClient.push({...client});
+      updated.oneClient.push(client);
       // updated[states.oneClient] = client;
       return updated;
     })

@@ -11,6 +11,12 @@ const BookingContents = () => {
   const daySwitch = DaySwitch(states.value);
   const monthSwitch = MonthSwitch(states.value);
 
+  const dateBook = new Date(states.value.year, states.value.month-1, states.value.date);
+  const bookYear = dateBook.getFullYear();
+  const bookMonth = ( '0' + (dateBook.getMonth() + 1)).slice(-2);
+  const bookdate = ('0' + dateBook.getDate()).slice(-2);
+  const bookingDate = bookdate + '-' + bookMonth + '-'  + bookYear;
+
   const onAddBooking = () => setOpenAddBooking(true);
 
   return (
@@ -25,14 +31,23 @@ const BookingContents = () => {
       <section className={styles.schedule}>
         <h4>SCHEDULE</h4>
         <div className={styles.scheduleBox}>
-          <h3>Michell Song</h3>
-          <p>Emode</p>
-          <p>11:00 AM - 2:00 PM</p>
-        </div>
-        <div className={styles.scheduleBox}>
-        <h3>Amy Kim</h3>
-          <p>Emode</p>
-          <p>2:00 PM - 4:00 PM</p>
+        { states.hasOwnProperty('bookClient') &&  
+          states.bookClient.length > 0
+          ? ( states.bookClient.map( (value,key) => (
+                  // console.log('===> bookClient: ', states.bookClient[index].bookDetail.bookDate);
+                  // console.log('===> bookClient: ', bookingDate, '/',states.bookClient[key].bookDetail.bookDate);
+                  bookingDate == states.bookClient[key].bookDetail.bookDate 
+                  ? (<div key={key}>
+                      <h3>{states.bookClient[key].name}</h3>
+                      <p>{states.bookClient[key].bookDetail.care}</p>
+                      <p>{`${states.bookClient[key].bookDetail.startTime}
+                               - ${states.bookClient[key].bookDetail.endTime}`}
+                      </p>
+                    </div>)
+                  : null
+              )))
+              : null                
+          }
         </div>
         <button className={styles.scheduleButton} onClick={onAddBooking}>
           <img className={styles.addSchedule} src="/images/calendar-plus-solid.png" alt="booking" />

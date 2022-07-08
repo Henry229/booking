@@ -18,6 +18,7 @@ function App({clientRepository}) {
     },
     clients : {},
     oneClient : [],
+    bookClient : [],
     // openFirst : null,
     // openSecond : null,
     // value : null,

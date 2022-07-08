@@ -5,10 +5,11 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "pwa-chrome",
+      "type": "chrome",
       "request": "launch",
-      "name": "Launch Chrome against localhost",
-      "file": "${workspaceFolder}/index.html"
+      "name": "chrome debugger",
+      "url": "http://localhost:3000/",
+      "file": "${workspaceFolder}/src"
     }
   ]
 }
