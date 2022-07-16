@@ -41,4 +41,18 @@
   padding-bottom: 0.5em;
 }
 
+.schedule {
+  color: white;
+  padding: 0.2rem 0.5rem;
+}
+
+.scheduleName {
+  font-size: 1em;
+}
+
+.scheduleTime {
+  font-size: 0.6em;
+}
+
+
 /* .my-modal-custom-class {} */

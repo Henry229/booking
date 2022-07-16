@@ -30,6 +30,7 @@ class ClientRepository {
 
   saveBookingDate(client, detail) {
     const newKey = push(child(ref(this.db),'clients')).key
+    console.log('%%%% detail- ', detail)
 
     const updates = {};
     updates[`/clients/${client.id}/bookDetail`] = detail;
@@ -40,40 +41,3 @@ class ClientRepository {
 }
 
 export default ClientRepository;
-
-// import { getDatabase, ref, child, push, update } from "firebase/database";
-
-// function writeNewPost(uid, username, picture, title, body) {
-//   const db = getDatabase();
-
-//   // A post entry.
-//   const postData = {
-//     author: username,
-//     uid: uid,
-//     body: body,
-//     title: title,
-//     starCount: 0,
-//     authorPic: picture
-//   };
-
-//   // Get a key for a new Post.
-//   const newPostKey = push(child(ref(db), 'posts')).key;
-
-//   // Write the new post's data simultaneously in the posts list and the user's post list.
-//   const updates = {};
-//   updates['/posts/' + newPostKey] = postData;
-//   updates['/user-posts/' + uid + '/' + newPostKey] = postData;
-
-//   return update(ref(db), updates);
-// }
-
-// let updates = {}
-// const newTransactionKey = docRef.child('transactions').push().key;
-// updates[`${ticker}/transactions/${newTransactionKey}`] ={
-//     date: new Date().toString(),
-//     transaction: `${Number(values.shares)} shares added @ $${perShare} ea`
-// }
-// updates[`${ticker}/category`] = values.category;
-// updates[`${ticker}/shares`] = newShares;
-// updates[`${ticker}/cost`] = newCost;
-

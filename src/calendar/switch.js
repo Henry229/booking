@@ -70,3 +70,18 @@ export const MonthSwitch = (value) => {
   };
   return fullMonth;
 }
+
+export const WorkingDate = (value) => {
+  const dateBook = new Date(value.year, value.month-1, value.date);
+  const bookYear = dateBook.getFullYear();
+  const bookMonth = ( '0' + (dateBook.getMonth() + 1)).slice(-2);
+  const bookdate = ('0' + dateBook.getDate()).slice(-2);
+  const bookingDate = bookMonth  + '-' + bookdate + '-'  + bookYear;
+  return bookingDate;
+};
+
+export const ChangeDate = (value) => {
+  const beDate = `${value.slice(8,10)}+'-'+${value.slice(5,7)}+'-'+${value.slice(0,4)}}`;
+  const ceDate = `${value.slice(6,10)}-${value.slice(3,5)}-${value.slice(0,2)}`;
+  return [beDate, ceDate]
+};

@@ -1,0 +1,51 @@
+wrapBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50px;
+  background:transparent;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding:0.5em;
+}
+
+.input {
+  width: 90%;
+  height: 2.5em;
+  font-size: 1.2rem;
+  align-items: center;
+  /* background-color: transparent; */
+  padding: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.8em;
+  border-radius: 0.7rem;
+  border: 0.2rem solid makerLightGrey;
+  transition: transform 250mm ease-in;
+}
+
+.input:hover {
+  border-color: makerLightGreen;
+  transform: scale(1.02);
+}
+
+.rgtButton {
+  width:50%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:0.7em;
+  background: darkgray;
+  padding:1em;
+  border: none;
+  border-radius: 50px;
+  box-shadow:  4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}

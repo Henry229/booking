@@ -1,0 +1,86 @@
+
+.container {
+  width: 90%;
+  background: #8E0000;
+  padding: 0.5em 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.7rem;
+  text-align: center;
+  border: 0.2rem solid darkgray;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.selectedClient {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 0.2em;
+  padding-bottom: 0.5em;
+}
+
+.clientName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.rightPart {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 1.2rem;
+}
+
+wrapBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50px;
+  background:transparent;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding:0.5em;
+}
+
+.input, .select, .textarea {
+  width: 90%;
+  height: 2.5em;
+  font-size: 1.2rem;
+  align-items: center;
+  /* background-color: transparent; */
+  padding: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.8em;
+  border-radius: 0.7rem;
+  border: 0.2rem solid makerLightGrey;
+  transition: transform 250mm ease-in;
+}
+
+.input:hover {
+  border-color: makerLightGreen;
+  transform: scale(1.02);
+}
+
+.bookButton {
+  width:50%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:0.7em;
+  background: darkgray;
+  padding:1em;
+  border: none;
+  border-radius: 50px;
+  box-shadow:  4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
