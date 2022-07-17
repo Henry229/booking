@@ -33,7 +33,6 @@ const BookingContents = () => {
   };
 
   const onEdit = (guy, info, idx) => {
-    console.log('???> ', guy, '/', info, '/', idx);
     setOpenEdit(true);
     setSelectedCustom(guy);
     setBookingInfo(info);

@@ -1,7 +1,7 @@
 .container {
   width: 40em;
   height: 60em;
-  background: #b71414;
+  background: #251341;
   padding: 1.5em; 
   color: white;
   text-align: center;
@@ -18,7 +18,7 @@
 .cancelButton {
   width: 4em;
   height: 4em;
-  background: #b71414;
+  background: #251341;
   outline: none;
   border: none;
   position: absolute;
@@ -30,4 +30,78 @@
   color: white;
   height: 90%;
   padding: 0.5em;
+}
+
+.clientBox {
+  width: 90%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+  color:#4FFBDF;
+  font-size: 1.5em;
+  gap: 1em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding:0.5em;
+}
+
+.containerDatePicker, 
+.containerDatePicker> div.react-datepicker-wrapper, 
+.containerDatePicker> div > div.react-datepicker__input-container
+.containerDatePicker> div > div.react-datepicker__input-container input {
+   width: 100% !important;
+}
+
+.datePicker {
+  width: 87% !important;
+  height: 2.5em;
+  font-size: 1.2rem;
+  align-items: center;
+  padding: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5em;
+  border-radius: 0.7rem;
+  border: 0.2rem solid makerLightGrey;
+}
+
+.input, .select, .textarea {
+  width: 90%;
+  height: 2.5em;
+  font-size: 1.2rem;
+  align-items: center;
+  padding: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.8em;
+  border-radius: 0.7rem;
+  border: 0.2rem solid makerLightGrey;
+  transition: transform 250mm ease-in;
+}
+
+.input:hover {
+  border-color: makerLightGreen;
+  transform: scale(1.02);
+}
+
+.bookButton {
+  width:50%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:0.7em;
+  background: darkgray;
+  padding:1em;
+  border: none;
+  border-radius: 50px;
+  box-shadow:  4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
 }

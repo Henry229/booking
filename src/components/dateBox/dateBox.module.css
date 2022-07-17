@@ -9,6 +9,7 @@
 
 .listBox {
   display: flex;
+  position: relative;
 }
 
 .dateBox {
@@ -54,5 +55,17 @@
   font-size: 0.6em;
 }
 
-
+.monthYear {
+  position: absolute;
+  /* top: 1rem; */
+  /* left: 2px; */
+  writing-mode:vertical-lr;
+  width: 10rem;
+  height: 15rem;
+  font-size: 1.2rem;
+  color: white;
+  background-color: transparent;
+  opacity: 1;
+  pointer-events: none;
+}
 /* .my-modal-custom-class {} */

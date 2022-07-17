@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
-import DatePicker from "react-datepicker";
+import DatePicker, {wrapperClassName} from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { format } from "date-fns";
 import styles from './editBook.module.css';
@@ -71,7 +71,6 @@ const EditBook = ({selectedCustom, bookingInfo, index, onEditCancel}) => {
     if (event.currentTarget == null) {
       return;
     }
-    console.log('====///>> event ---', event.currentTarget)
     event.preventDefault();
     alterBook({
       ...inputs,
@@ -91,9 +90,18 @@ const EditBook = ({selectedCustom, bookingInfo, index, onEditCancel}) => {
           <span className={styles.date}>{states.value.date}  </span>
           <span className={styles.month}>{monthSwitch}</span>
         </div>
+        <div className={styles.clientBox}>
+          <div className={styles.cleintName}>{selectedCustom.name}</div>
+          <div className={styles.cleintMobile}>{selectedCustom.mobile}</div>
+        </div>
       </header>
-        <div>
-          <DatePicker dateFormat="dd/MM/yyyy" selected={alterDate} onChange={alterBookDate} /> 
+        <div className={styles.containerDatePicker}>
+          <DatePicker 
+            className={styles.datePicker} 
+            dateFormat="dd/MM/yyyy" 
+            selected={alterDate} 
+            onChange={alterBookDate} 
+          /> 
         </div>
       <form className={styles.form} ref={formRef} onSubmit={onSubmit}>
         <input className={styles.input} onChange={onChange} type="time" ref={startTimeRef} name="startTime" value={startTime}/>
@@ -104,7 +112,7 @@ const EditBook = ({selectedCustom, bookingInfo, index, onEditCancel}) => {
           <option value="emmode strong">emmode strong</option>
         </select>
         <textarea className={styles.textarea} onChange={onChange} type="text" name="message" ref={messageRef} value={message}/>
-        <button className={styles.bookButton} type="submit"></button>
+        <button className={styles.bookButton} type="submit">Alter</button>
       </form>
     </div>
   )
