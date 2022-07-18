@@ -27,7 +27,6 @@ const Booking = ({clientRepository}) => {
 
     const settingState = (copyClients) => {
       return new Promise((resolve, reject) => {
-        console.log('===== copyClients: ', copyClients);
         let upClient = [];
         Object.keys(copyClients).map( key => {
           if ( copyClients[key].hasOwnProperty('bookDetail')) {
@@ -47,7 +46,6 @@ const Booking = ({clientRepository}) => {
     const syncClient = async () => {
       const result1 = await stopSync();
       const result2 = await settingState(result1);
-      console.log('=== Evoke useEffect ==', result2);
     }
     syncClient(); 
     return () => stopSync();

@@ -21,8 +21,10 @@ const DateBox = ({ value, clientRepository}) => {
   // console.log('=====///// today : ',todate);
 
   useEffect(() => {
-    const location = document.querySelector('.move').offsetTop
-    window.scrollTo({top:location, behavior: 'smooth'}) 
+    // const location = document.querySelector('.move').offsetTop
+    // console.log('////', location);
+    // window.scrollTo({top:location, behavior: 'smooth'}) 
+    document.querySelector('.move').scrollIntoView({behavior: 'smooth'});
     moveScroll = false
   },[moveScroll]);
 
@@ -51,7 +53,6 @@ const DateBox = ({ value, clientRepository}) => {
             ? <div className={styles.monthYear}>{value.year} {monthSwitch}</div>
             : null 
           }
-          {/* { todate == bookingDate ? (<MoveToday ref={moveRef} moveRef={moveRef}></MoveToday>) : null} */}
           { todate == bookingDate  
             ? ( moveScroll = true,
                 (<div className="move"></div>)
